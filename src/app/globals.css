@@ -1,33 +1,56 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+:root {
+    --background: #0A0D20;
+    --foreground: #fff;
+    --foreground-muted: #ababab80;
+    --foreground-muted-2: #ababab2b;
+    --card: #101332;
+    --secondary: #6bdaff;
+    --border: #181d3e;
+    --border-radius: 5px;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: var(--background);
+    color: white;
+    font-size: 1.6rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.main {
+    display: flex;
+    height: 100vh;
+    padding: 20px;
+
+}
+
+.left-sidebar {
+    width: 250px;
+    background-color: var(--card);
+    height: 100%;
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.right-sidebar {
+    width: 300px;
+    height: 100%;
+    background-color: var(--card);
+    border-radius: var(--border-radius);
+    padding: 20px;
+
+}
+
+.content {
+    padding: 0 20px;
+    flex: 1;
 }

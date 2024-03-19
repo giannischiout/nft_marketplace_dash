@@ -1,0 +1,85 @@
+.sidebar {
+    position: relative;
+    width: 220px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    /* padding-bottom: 20px;
+    padding-top: 20px; */
+    padding: 20px;
+
+    /* border-bottom: 1px solid var(--foreground-muted-2); */
+}
+
+.menuItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: var(--foreground-muted);
+    cursor: pointer;
+    font-size: 1.3rem;
+    letter-spacing: 1.1px;
+}
+
+
+.active {
+    color: var(--foreground); 
+    position: relative;
+    z-index: 200;
+}
+
+.active::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: var(--background);
+    z-index: -1;
+
+}
+
+.menuItem svg {
+    margin-right: 10px;
+
+}
+
+.seperator {
+    background-color: var(--foreground-muted-2);
+    height: 1px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.themeContainer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.themeContainer  span {
+    font-size: 1.3rem;
+}
